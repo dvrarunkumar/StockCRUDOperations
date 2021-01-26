@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap.min.css"/>
+
+    <title>DataTables</title>
+</head>
+<body>
+
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">DataTables</a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="/">Basic <span class="sr-only">(current)</span></a></li>
+                <li><a href="with-post.html">With POST</a></li>
+                <li><a href="advanced.html">Advanced</a></li>
+                <li><a href="scroller.html">Scroller</a></li>
+                <li><a href="rendered-column.html">Rendered column</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!--<div class="container">
+    <table id="stocks" class="table">
+        <thead>
+        <tr>
+            <th>Date</th>
+            <th>StockSymbol</th>
+            <th>Quantity</th>
+        </tr>
+        </thead>
+    </table>
+</div>-->
+
+<table id="example" class="display" style="width:100%">
+    <thead>
+    <tr>
+        <th>First name</th>
+        <th>Last name</th>
+        <th>Position</th>
+        <th>Office</th>
+        <th>Start date</th>
+        <th>Salary</th>
+    </tr>
+    </thead>
+    <tfoot>
+    <tr>
+        <th>First name</th>
+        <th>Last name</th>
+        <th>Position</th>
+        <th>Office</th>
+        <th>Start date</th>
+        <th>Salary</th>
+    </tr>
+    </tfoot>
+</table>
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap.min.js"></script>
+
+<!--<script type="text/javascript" src="js/jquery.spring-friendly.js"></script>-->
+<script>
+$(document).ready(function() {
+    $('#example').DataTable( {
+        "processing": false,
+        "serverSide": false,
+        "ajax": "data.txt"
+    } );
+} );
+    </script>
+
+</body>
+</html>
